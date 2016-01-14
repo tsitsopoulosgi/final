@@ -1,0 +1,25 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+public class Controller{
+	private Model model;
+	private View view;
+	
+	//erxetai to model kai to view apo tin main kai 
+	public Controller(Model model, View view){
+		this.model=model;
+		this.view=view;
+		view.addListener(new BuyListener());
+	}
+	
+	
+	//akroatis gia to koumpi buy
+	class BuyListener implements ActionListener{
+		public void actionPerformed(ActionEvent e) {
+			view.reset();
+			System.out.println("hallo");			
+		}
+		
+	}
+}
