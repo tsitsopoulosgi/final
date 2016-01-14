@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+
+
+public class Model {
+	
+	//2 arraylist gia tis tainies kai tis antistoixes theseis
+	private ArrayList<String> movieList;
+	private ArrayList<Integer> seats ;
+	
+	public Model(){
+		movieList = new ArrayList<String>();
+		seats = new ArrayList<Integer>();
+	}
+	
+	//methodos gia tin meiwsi twn thesewn stin thesi i kata x
+	public void decrease(int i, int x){
+		seats.set(i, seats.get(i)-x);
+	}
+	
+	public boolean hasFreeSeats(int i){
+		return seats.get(i)==0?false:true;
+	}
+	
+	//prosthiki tainiwn
+	public void addMovie(String aMovie){
+		movieList.add(aMovie);
+	}
+	
+	//prosthiki thesewn gia tin antistoixi tainia
+	public void addSeats(int numOfSeats){
+		seats.add(numOfSeats);
+	}
+	
+	//onoma tainias
+	public String getMovie(int i){
+		return movieList.get(i);
+	}
+	
+	//epistrefei oli tin lista
+	public ArrayList<String> getMovieList() {
+		return movieList;
+	}
+	
+	
+}
